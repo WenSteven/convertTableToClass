@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<classPathEntry
-		location="D:\.m2\repository\com\diyfintech\mysql-connector-java\5.1.26\mysql-connector-java-5.1.26-bin.jar" />
+		location="/Users/wenqi/.m2/repository/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar" />
 	<context id="mySql" targetRuntime="MyBatis3" defaultModelType="flat">
 		<commentGenerator>
 			<property name="suppressDate" value="false" />
@@ -12,26 +12,26 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.0.200:3306/diyfindb?useUnicode=true&amp;characterEncoding=utf-8"
-			userId="diyfintech" password="163.com" />
+			connectionURL="jdbc:mysql://192.68.75.20:3306/seeing?useUnicode=true&amp;characterEncoding=utf-8"
+			userId="seeing" password="seeing" />
 
 		<javaModelGenerator targetPackage="model"
-			targetProject="D:/project/generator/">
+			targetProject="/Users/wenqi/Develop/mybatis/">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator targetPackage="xml"
-			targetProject="D:/project/generator/">
+			targetProject="/Users/wenqi/Develop/mybatis/">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator targetPackage="mapper"
-			targetProject="D:/project/generator/" type="XMLMAPPER">
+			targetProject="/Users/wenqi/Develop/mybatis/" type="XMLMAPPER">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="sys_menu_btn" enableCountByExample="false"
+		<table tableName="adm_pati_index" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false" />
 
