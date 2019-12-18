@@ -4,16 +4,16 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<classPathEntry
-		location="/Users/wenqi/.m2/repository/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar" />
+		location="/Users/wenqi/.m2/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar" />
 	<context id="mySql" targetRuntime="MyBatis3" defaultModelType="flat">
 		<commentGenerator>
 			<property name="suppressDate" value="false" />
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.68.75.20:3306/seeing?useUnicode=true&amp;characterEncoding=utf-8"
-			userId="seeing" password="seeing" />
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://localhost:5432/template_market_uat?useUnicode=true&amp;characterEncoding=utf-8"
+			userId="slotuser" password="voldemort" />
 
 		<javaModelGenerator targetPackage="model"
 			targetProject="/Users/wenqi/Develop/mybatis/">
@@ -31,7 +31,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="adm_pati_index" enableCountByExample="false"
+		<table tableName="template_order" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false" />
 
