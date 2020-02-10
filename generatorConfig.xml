@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
+<!--	这里制定驱动jar所在的绝对路径-->
 	<classPathEntry
 		location="/Users/wenqi/.m2/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar" />
 	<context id="mySql" targetRuntime="MyBatis3" defaultModelType="flat">
@@ -10,11 +11,11 @@
 			<property name="suppressDate" value="false" />
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
-
+<!--		这里设置数据库的连接信息-->
 		<jdbcConnection driverClass="org.postgresql.Driver"
-			connectionURL="jdbc:postgresql://localhost:5432/template_market_uat?useUnicode=true&amp;characterEncoding=utf-8"
-			userId="slotuser" password="voldemort" />
-
+			connectionURL="jdbc:postgresql://localhost:5432/knowhowxm_dev?useUnicode=true&amp;characterEncoding=utf-8"
+			userId="postgres" password="" />
+<!--		生成mapper/xml/model，并制定生成等目录-->
 		<javaModelGenerator targetPackage="model"
 			targetProject="/Users/wenqi/Develop/mybatis/">
 			<property name="enableSubPackages" value="true" />
@@ -31,7 +32,8 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="template_order" enableCountByExample="false"
+<!--		设置要生产mapper/xml等等表名-->
+		<table tableName="users" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false" />
 
